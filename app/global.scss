@@ -1,0 +1,89 @@
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark;
+
+  background-color: #38354a;
+}
+
+/* min body height */
+
+body {
+  
+  font-weight: 300;
+  min-height: 300vh;
+
+
+  header {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 3rem;
+    background-color: #2c293d;
+
+    border-bottom: 1px #1b1926 solid ;
+
+
+    .city, .profile_pic_container {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .city {
+      margin-left: 2vw;
+      font-weight: 400;
+      
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .title {
+      font-weight: 100;
+      font-size: 1.5rem;
+    }
+
+    .profile_pic_container {
+      display: flex;
+      justify-content: flex-end;
+      .profile_pic {
+        border-radius: 50%;
+
+        margin-right: 2vw;
+        border: 1px #2c293d solid;
+      }
+    }
+  }
+
+  main {
+    // margin-top: 4rem;
+  }
+
+}
+
+
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}

@@ -1,0 +1,35 @@
+
+
+.event_card {
+    margin: auto;
+    width: 100%;
+
+    .thumbnail {
+    }
+
+    .info {
+        display: flex;
+        justify-content: flex-start;
+
+        height: 3rem;
+        background-color: #212121;
+
+        .date {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: blue;
+            height: 100%;
+
+            padding: 0 2vw;
+
+            .day, .month_date {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
