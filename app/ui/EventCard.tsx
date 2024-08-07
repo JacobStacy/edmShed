@@ -52,6 +52,7 @@ export function Event_Card ({
                     <div className={styles.month_date}>
                         {month} {day_num}
                     </div>
+                    <div className={styles.background}></div>
                 </div>
             </div>
         </div>

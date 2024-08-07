@@ -5,6 +5,7 @@
     width: 100%;
 
     .thumbnail {
+    
     }
 
     .info {
@@ -20,7 +21,9 @@
             justify-content: center;
             align-items: center;
 
-            background-color: blue;
+            position: relative;
+
+            // background-color: blue;
             height: 100%;
 
             padding: 0 2vw;
@@ -29,7 +32,46 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                font-weight: 500;
+                z-index: 1;
+
+                filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+            }
+
+            .background {
+                position: absolute;
+                height: 8vw;
+                width: 8vw;
+
+                z-index: 0;
+
+                background-color: #e76cfa29;
+                // filter: drop-shadow(0 0 6px rgb(110, 20, 220));
+
+                animation: rotate360 60s linear infinite;
             }
         }
     }
 }
+
+
+@keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+
+@keyframes  {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
