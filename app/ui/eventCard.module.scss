@@ -4,6 +4,9 @@
     margin: auto;
     width: 100%;
 
+    text-decoration: none;
+    color: #fff;
+
     .thumbnail {
     
     }
@@ -12,7 +15,7 @@
         display: flex;
         justify-content: flex-start;
 
-        height: 3rem;
+        height: 3.4rem;
         background-color: #212121;
 
         .date {
@@ -28,6 +31,8 @@
 
             padding: 0 2vw;
 
+            animation: float 3s ease-in-out infinite alternate;
+
             .day, .month_date {
                 display: flex;
                 justify-content: center;
@@ -36,7 +41,8 @@
                 font-weight: 500;
                 z-index: 1;
 
-                filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+                filter: drop-shadow(0 0 3px #000);
+                
             }
 
             .background {
@@ -52,6 +58,15 @@
                 animation: rotate360 60s linear infinite;
             }
         }
+
+        .details {
+            margin: .75vh 0;
+            margin-left: 2vw;
+            // border-left: solid 1px #1b19266b;
+            .title {
+                font-weight: 400;
+            }
+        }
     }
 }
 
@@ -65,13 +80,13 @@
     }
 }
 
-
-@keyframes  {
+@keyframes float {
     from {
-      transform: rotate(0deg);
+        transform: scale(1);
     }
     to {
-      transform: rotate(360deg);
+        transform: scale(1.05);
     }
 }
+
 

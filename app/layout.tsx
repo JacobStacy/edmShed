@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={radioCanada.className}>
         <header>
           <div className="city">
-            ▾ San Diego
+            ▾ SD
           </div>
 
           <div className="title">

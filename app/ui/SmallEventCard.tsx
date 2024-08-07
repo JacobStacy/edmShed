@@ -3,22 +3,16 @@ import styles from "./eventCard.module.scss"
 import Image from "next/image";
 
 
-export function EventCard ({
+export function SmallEventCard ({
     title,
     thumbnail,
     link,
-    date,
-    venue,
-    location,
-    age_restiction
+    date
 }:{
     title : string;
     thumbnail : string;
     link : string;
     date : Date;
-    venue? : string;
-    location? : string;
-    age_restiction? : string;
 }
 ) {
 
@@ -27,16 +21,7 @@ export function EventCard ({
     const month = date.toLocaleString('default', { month: 'short' });
     const year = date.getFullYear();
 
-    venue = venue === undefined ? "" : venue;
-    age_restiction = age_restiction === undefined ? "" : age_restiction;
-    location = location === undefined ? "" : location;
-
-    const dash = (venue != "" && location != "")  ? " - " : "";
-    const pipe = age_restiction != "" ? " | " : "";
-    const plus = age_restiction != "" ? "+" : "";
-
-
-    const desc = `${venue}${dash}${location}${pipe}${age_restiction}${plus}`;
+    
 
     return (
         <Link href={link} className={styles.event_card}>
