@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { radioCanada } from "./ui/fonts";
 import "./global.scss";
-import Image from "next/image";
+import { TopNav } from "./ui/TopNav";
+import { BottomNav } from "./ui/BottomNav";
 
 
 
@@ -18,28 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={radioCanada.className}>
-        <header>
-          <div className="city">
-            ▾ SD
-          </div>
-
-          <div className="title">
-            EDM SHED
-          </div>
-
-          <div className="profile_pic_container">
-            <Image 
-              src="/profile-place-holder.png" 
-              alt="Profile Picture" 
-              width={35} 
-              height={35}
-              className="profile_pic"
-              />
-          </div>
-        </header>
+        <TopNav/>
         <main>
           {children}
         </main>
+        <BottomNav/>
       </body>
     </html>
   );
