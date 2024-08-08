@@ -1,0 +1,83 @@
+
+
+.event_banner {
+    display: flex;
+    
+    // width: 100%;
+    
+    margin-left: 3vw;
+
+    text-decoration: none;
+    color: #fff;
+    &:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .thumbnail {
+        width: 20%;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+
+        min-height: 3.4rem;
+        background-color: #212121;
+
+        
+
+        
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            margin: .75vh 0;
+            margin-left: 2vw;
+            // border-left: solid 1px #1b19266b;
+            .title {
+                font-weight: 400;
+            }
+
+            .description {
+                font-weight: 100;
+                font-size: .8rem;
+            }
+
+            .date {
+                color: #ffffffab;
+                font-weight: 100;
+                font-size: .8rem;
+            }
+            
+        }
+        
+        
+        .ticket {
+            color: #692e72;
+        }
+    }
+}
+
+
+@keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+

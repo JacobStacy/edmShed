@@ -3,6 +3,7 @@ import Image from "next/image";
 import { EventCard } from "./ui/EventCard";
 import { SmallEventCard } from "./ui/SmallEventCard";
 import { Heading } from "./ui/Heading";
+import { EventBanner } from "./ui/EventBanner";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
         </div>
         
         <div className={styles.out_of_area} >
-          <Heading>Further Away</Heading>
+          <Heading> Further Away  </Heading>
           <div className={styles.cards}>
             <SmallEventCard
               title="The Far Night"
@@ -69,10 +70,36 @@ export default function Home() {
             />
           </div>
         </div>
-        {/* <div className={styles.more_near_you}>
+        <div className={styles.more_near_you}>
           <Heading> More Near You </Heading>
-
-        </div> */}
+          <div className={styles.banners}>
+            <EventBanner
+              title="The Big Night"
+              thumbnail="/posters/mock1.png"
+              link="https://www.google.com"
+              ticket_link="https://youtube.com"
+              date={new Date(2024, 8, 2)}
+              venue="Weird Warehouse"
+              location="San Diego, CA"
+              age_restriction="21"
+            /> 
+            <EventBanner
+              title="The Big Night"
+              thumbnail="/posters/mock2.png"
+              link="https://www.google.com"
+              date={new Date(2024, 8, 2)}
+              location="San Diego, CA"
+            /> 
+            <EventBanner
+              title="Rock the Boat"
+              thumbnail="/posters/mock3.png"
+              link="https://www.google.com"
+              date={new Date(2025, 3, 25)}
+              venue="Sketchy Boat"
+              age_restriction="18"
+            />
+          </div>
+        </div>
         
       </>
   );

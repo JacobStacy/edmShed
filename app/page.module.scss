@@ -36,7 +36,10 @@
 
 }
 
-// .more_near_you {
-//     .anners
-// }
-
+.more_near_you {
+    .banners {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+}
