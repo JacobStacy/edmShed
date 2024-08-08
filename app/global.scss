@@ -22,6 +22,15 @@ html {
 
 /* min body height */
 
+a {
+  text-decoration: none;
+    color: #fff;
+    &:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
 body {
   
   font-weight: 300;
@@ -73,6 +82,10 @@ body {
 
   main {
     // margin-top: 4rem;
+    max-width: 900px;
+    margin: auto;
+    
+    background-color: #212121;
   }
 
 }

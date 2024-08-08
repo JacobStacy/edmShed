@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./eventCard.module.scss"
+import styles from "./smallEventCard.module.scss"
 import Image from "next/image";
 
 
@@ -7,28 +7,26 @@ export function SmallEventCard ({
     title,
     thumbnail,
     link,
-    date
+    date,
+    location
 }:{
     title : string;
     thumbnail : string;
     link : string;
     date : Date;
+    location : string;
 }
 ) {
 
-    const day = date.toLocaleString('default', { weekday: "short" });
+    const day = date.toLocaleString('default', { weekday: "long" });
     const day_num = date.getDate();
-    const month = date.toLocaleString('default', { month: 'short' });
-    const year = date.getFullYear();
-
-    
+    const month = date.toLocaleString('default', { month: 'long' });
+    const year = date.getFullYear();    
 
     return (
         <Link href={link} className={styles.event_card}>
-
-
             <div className={styles.thumbnail}>
-                <Image 
+                <Image
                     src={thumbnail} 
                     alt="event_thumbnail"
                     sizes="100vw"
@@ -39,24 +37,15 @@ export function SmallEventCard ({
                         height: "auto",
                     }}
                 />
-            </div>
-
-            <div className={styles.info}>
-                <div className={styles.date}>
-                    <div className={styles.day}>
-                        {day}
-                    </div>
-                    <div className={styles.month_date}>
+                <div className={styles.overlay}>
+                    <div className={styles.date}>
                         {month} {day_num}
                     </div>
-                    <div className={styles.background}></div>
-                </div>
-                <div className={styles.details}>
                     <div className={styles.title}>
                         {title}
                     </div>
-                    <div className={styles.description}>
-                        {desc}
+                    <div className={styles.location}>
+                        {location}
                     </div>
                 </div>
             </div>

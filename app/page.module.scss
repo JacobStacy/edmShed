@@ -7,11 +7,36 @@
 
 
 .out_of_area {
-    padding: 1px;
+    padding-top: 1px;
     margin-top: -1px;
-    background-color: #212121;
-    .heading {
-        margin-top: .5vh;
-        margin-left: 1vw;
+
+
+
+    width: 100%;
+    height: auto;
+
+
+    .cards {
+        display: flex;
+        height: fit-content;
+
+        margin-top: 1.5vh;
+
+        overflow-y: scroll;
+
+        overflow: auto; /* Enable scrolling */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+        &::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
     }
+
+
 }
+
+// .more_near_you {
+//     .anners
+// }
+

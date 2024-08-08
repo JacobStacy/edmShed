@@ -6,6 +6,10 @@
 
     text-decoration: none;
     color: #fff;
+    &:visited {
+        text-decoration: none;
+        color: #fff;
+    }
 
     .thumbnail {
     
@@ -13,59 +17,72 @@
 
     .info {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
 
-        height: 3.4rem;
+        min-height: 3.4rem;
         background-color: #212121;
 
-        .date {
+        .left_side {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
-            position: relative;
-
-            // background-color: blue;
-            height: 100%;
-
-            padding: 0 2vw;
-
-            animation: float 3s ease-in-out infinite alternate;
-
-            .day, .month_date {
+            .date {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-
-                font-weight: 500;
-                z-index: 1;
-
-                filter: drop-shadow(0 0 3px #000);
-                
+    
+                position: relative;
+    
+                // background-color: blue;
+                max-height: 100%;
+                min-width: 4rem;
+    
+                padding: 0 2vw;
+    
+                animation: float 3s ease-in-out infinite alternate;
+    
+                .day, .month_date {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    font-weight: 500;
+                    z-index: 1;
+    
+                    filter: drop-shadow(0 0 3px #000);
+                    
+                }
+    
+                .background {
+                    position: absolute;
+                    height: 2.6rem;
+                    width: 2.6rem;
+    
+                    z-index: 0;
+    
+                    background-color: #e76cfa29;
+                    // filter: drop-shadow(0 0 6px rgb(110, 20, 220));
+    
+                    animation: rotate360 60s linear infinite;
+                }
             }
 
-            .background {
-                position: absolute;
-                height: 8vw;
-                width: 8vw;
-
-                z-index: 0;
-
-                background-color: #e76cfa29;
-                // filter: drop-shadow(0 0 6px rgb(110, 20, 220));
-
-                animation: rotate360 60s linear infinite;
+            .details {
+                margin: .75vh 0;
+                margin-left: 2vw;
+                // border-left: solid 1px #1b19266b;
+                .title {
+                    font-weight: 400;
+                }
+    
+                .ticket {
+                    justify-self: flex-end;
+                }
             }
         }
-
-        .details {
-            margin: .75vh 0;
-            margin-left: 2vw;
-            // border-left: solid 1px #1b19266b;
-            .title {
-                font-weight: 400;
-            }
+        
+        .ticket {
+            color: #692e72;
         }
     }
 }
